@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="lib/jquery-3.4.1.js" defer></script>
+    <script src="lib/jquery-3.4.1.min.js" defer></script> 
+    <script src="lib/dom_helper.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/main1.js" defer="defer"></script>
+    <script src="js/win-logic.js" defer="defer"></script>
+</head>
+<body>
+
+    <a href="#" id="reset-game" class="reset_link">Reset Game</a>
+    <a href="#" id="game-rules" class="reset_link">Game Rules</a>
+    <div class="container" id="rules">
+        <h4>Game Rules</h4>
+        <div>
+            <div>
+                <p><b>1. Goal</b> Beat the dealer by getting a hand as close to 21 as possible, without going over 21. A blackjack occurs when you get one ace and one 10 point card.</p>
+                <p><b>2. Gameplay</b> The dealer will give 2 cards to themself and 2 cards to you. The dealer's second card will be played face down. You can choose to either hit (receive more cards) or stand (move on to the next hand). You can hit as many times as you choose so long as your deck is under 21.</p>
+                <p><b>3. Card Values</b> Queens, Kings, and Jacks are worth 10, pip cards are worth their face value, but Aces can be worth either 11 or 1. In this game, Aces have a default value is 11 unless you go over 21 on your hand.</p>
+            </div>
+            <div>
+                <p><b>4. Betting</b> Bets must be placed prior to playing.</p>
+                <p><b>5. Payout</b> Payout is 1:1 unless you get a blackjack. For a blackjack, payout is 3:2.</p>
+                <button id="rules-close">Close</button>
+            </div>
+        </div>
+  </div>
+    
+    <div class="container">
+       <div id="welcome">
+              <h1>BLACKJACK</h1>
+              <p>Start Playing. <br>Select bet amount.</p>
+              <div id="bet-options">
+                  <a href="#" id="chip10"><img src="img/10-chip.png" class="bet clickbet"></a>
+                  <a href="#" id="chip25"><img src="img/25-chip.png" class="bet clickbet"></a>
+                  <a href="#" id="chip50"><img src="img/50-chip.png" class="bet clickbet"></a>
+                  <a href="#" id="chip100"><img src="img/100-chip.png" class="bet clickbet"></a>
+                <div>
+                  <span class="current-bet">0</span>
+                  <img src="img/pile-chip.png" class="bet-small">
+                  <span class="current-chip-balance">500</span>
+                </div>
+                  <button id="start-game-button">Play</button>
+              </div>	
+          </div>
+    </div>
+    <div class="container inactive" id="game-board">
+        <div class="first-row">
+            <p>Dealer Player</p>
+        </div>
+
+        <div class="second-row">
+            <div id="deck">
+                <img src="img/card_back.png" class="card pile">
+            </div>
+
+            <div id="dealer"></div>
+            <span class="dealer-hand-total game-board-totals"></span>
+            
+            <div id="user-hand"></div>
+            <span class="hand-total game-board-totals">0</span>
+        </div>
+
+        <div id="sidebar">
+            <button id="hit-button">Hit</button>
+            <button id="stand-button" class="secondary">Stand</button>
+        </div>
+    </div>
+        
+        <div class="bet-gameplay inactive">
+                <span class="current-bet">___</span>
+                <img src="img/pile-chip.png" class="bet">
+                <span class="current-chip-balance">___</span>
+        </div>
+
+        <div id="new-bet-options"></div>
+            
+         <div id="game-over">
+            <h3 id="game-outcome"></h3>
+            <button class="new-game-button inactive">Play Again</button>
+        </div>    
+</body>
+</html>

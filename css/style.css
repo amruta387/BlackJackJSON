@@ -1,0 +1,240 @@
+body {
+	background: #103324;
+	text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+h1 {font-size: 2em;margin-top: 60px;}
+
+h4 {font-size: 1.75em;}
+
+.first-row p{
+	word-spacing: 8em;
+	font-size: 2em;
+	font-weight: bold;
+	margin-left: 8%;
+
+}
+
+p {
+	font-size: 1.25em;
+	line-height: 1.75em;
+}
+
+.reset_link{
+    text-decoration: none;
+	padding: 10px;
+    font-size: 1.5em;
+	background-color: #d60438;
+	color: white;
+	margin: 50px 20px;
+	margin-bottom: 20px;
+}
+.reset_link:hover{
+	background-color:black;
+}
+
+#rules {
+	padding:10px 20px;
+	text-align: left;
+	display: none; 
+	background: #0F2725;
+	position: absolute;
+	top: 18%;
+	left: 10%;
+	width: 80%;
+	font-size: 0.9em;
+	z-index: 99;
+}
+
+#rules button {
+	float: right;
+	margin-right: 20px;
+}
+
+#rules h4 {
+	text-align: center;
+}
+
+.bet {
+	height: 60px;
+	width: 60px;
+	margin: 2px;
+	display: inline-block;
+}
+
+.clickbet {
+	margin: 20px 10px;
+}
+
+.clickbet:hover {
+	transform: scale(1.10);
+}
+
+.bet-small {
+	margin-left: 50px;
+	margin-right: 50px;
+	height: 40px;
+	width: 40px;
+}
+
+.bet-gameplay {
+	font-size: 1em;
+	margin: 40px;
+  }
+
+ .bet-gameplay span, .bet-gameplay img { 
+    padding: 20px;
+} 
+
+.current-bet, .current-chip-balance{
+    font-size: 1.5em;
+}
+
+.card {
+	display: inline-block;
+	border-radius: 12.5px;
+	padding-right: 50px;
+}
+
+.pile {
+	margin-right: 100px;
+} 
+
+button, button:focus {
+	margin: 20px;
+	padding: 10px 20px;
+	background-color: #d60438;
+	color: white;
+	font-size: 1.25em;
+	font-weight: 400;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+button.secondary {background: #1E6692;}
+
+button:active {background: black;}
+
+button.disabled-button, button.secondary.disabled-button {
+	background: #0F2725;
+}
+/* 
+#game-outcome{
+	position: absolute;
+	top: 455px;
+	left: 700px;
+	animation: flash 0.9s ease-out infinite;
+}
+
+@keyframes flash{
+	0%{
+		opacity:1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+} */
+
+.inactive {
+	display: none;
+}
+
+.hand-toatal, .dealer-hand-total {
+	padding: 10px 0;
+	margin: 2px;
+	display: inline-block;
+	font-size: 1.25em;
+	text-align: center;
+	width: 50px;
+}
+
+
+.game-board-totals {
+	position: relative;
+    left: -15px; 
+    font-size: 1.5em;
+	margin-right: -15px; 
+}
+
+#sidebar{
+	margin-top: 30px;
+}
+
+#sidebar button {
+
+	width: 100px;
+    height: 50px;
+}
+
+#deck, #dealer, #user-hand{
+	display: inline-block;
+	position: relative;
+}
+
+@media all and (max-width: 600px){
+	.bet-gameplay {
+		top: 0;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.reset_link{
+		padding: 5px;
+		font-size: 0.75em;
+		display: inline-block;
+	}
+
+	.game-board h4 {
+		font-size: 1.25em;
+	}
+
+	.game-over h3 {
+		font-size: 2.25em;
+	}
+
+	p {
+		font-size: 1.4em;
+	}
+
+	#welcome p {
+		width: 100%;
+	}
+
+	.card {
+		width: 77px;
+		height: 103.5px;
+	}
+
+	#sidebar button {
+		width: 70px;
+		height: 40px;
+		font-size: .75em;
+	}
+
+	.bet-gameplay {
+		font-size: 1.75em;
+		position: relative;
+		top: 0;
+		margin: 0 auto;
+	}
+
+	.bet-gameplay .bet {
+		height: 30px;
+		width: 30px;
+	}
+
+	.bet-gameplay span {
+		font-size: .75em;
+		display: inline-block;
+		margin-left: 20px;
+		position: relative;
+		bottom: 10px;
+	}
+
+}
